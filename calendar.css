@@ -1,0 +1,83 @@
+/* 
+    Author     : James La Broy
+*/
+
+.calendar {
+    position: relative;
+    display: inline-block;
+    background-color: #ebeded;
+    border-radius: 3px;
+    border-bottom: 3px solid #d4d7da;
+    color: #35495e;
+    font-family: "HelveticaNeueLight","HelveticaNeue-Light","Helvetica Neue Light","HelveticaNeue","Helvetica Neue",'TeXGyreHerosRegular',"Helvetica","Tahoma","Geneva","Arial",sans-serif;
+    font-weight: 300;
+}
+
+    .calendar .calendar-header {
+	background-color: #e64c3c;
+	color: #fff;
+	border-bottom: 3px solid #c03a2b;
+	border-radius: 3px 3px 0  0;
+	padding: 10px;
+	text-align: center;
+    }
+
+	.calendar .calendar-header .next {
+	    margin-top: 2px;
+	    cursor: pointer;
+	    float:right;
+	}
+
+	.calendar .calendar-header .previous {
+	    margin-top: 2px;
+	    cursor: pointer;
+	    float:left;
+	}
+
+    .calendar table {
+	margin: 5px;
+    }
+
+    .calendar table th {
+	font-size: 12px;
+    }
+
+    .calendar tr {
+	background-color: transparent !important;
+    }
+
+    .calendar table td {
+	width: 25px;
+	height: 27px;
+	font-size: 12px;
+	padding: 0;
+    }
+
+    .calendar table td:not(.filled) {
+	height: 0;
+    }
+
+    .calendar .day {
+	text-align: center;
+    }
+
+    .calendar .month {
+	text-align: center;
+	display: inline-block;
+	margin-right: 10px;
+    }
+
+    .calendar .year {
+	text-align: center;
+	display: inline-block;
+    }
+
+    .calendar .selected {
+	background-color: #d4d7da;
+	border-radius: 3px;
+    }
+
+    .calendar .filled {
+	cursor: pointer;
+    }
+    
