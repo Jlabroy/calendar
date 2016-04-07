@@ -12,3 +12,6 @@ A simple vanilla JS calendar.
 ```
 
 You can now submit your form as normal and have a nice calendar.
+
+## Example
+<a href='http://jlabroy.github.io/calendar/example.html'>Click here for an example</a>
