@@ -3,22 +3,28 @@
 */
 
 Object.prototype.calendar = function() {
-
+	var date_input = this;
+	
 	var days = ['sun','mon','tue','wed','thu','fri','sat'];
 	var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 
-	var date = new Date();
+	var date = date_input.value == '' ? new Date() : new Date(date_input.value);
 	var current_month = date.getMonth();
 	var current_year = date.getFullYear();
 
 	var day;
 	var month;
 	var year;
-
-	var selected_day, selected_month, selected_year;
+	
+	if (date_input.value != '') {
+		var selected_day = date.getDate(), 
+			selected_month = date.getMonth() + 1, 
+			selected_year = date.getFullYear();
+	} else {
+		var selected_day, selected_month, selected_year;
+	}
 
 	var calendar;
-	var date_input = this;
 
 	init();
 	function init() { 
@@ -40,7 +46,7 @@ Object.prototype.calendar = function() {
 
 		month = document.createElement("div");
 		month.classList.add("month");
-		month.innerHTML = months[date.getMonth()];
+		month.innerHTML = months[current_month];
 		header.appendChild(month);
 
 		year = document.createElement("div");
@@ -108,7 +114,7 @@ Object.prototype.calendar = function() {
 		}
 
 		container.appendChild(calendar);
-
+		
 		changeDate(current_month, current_year);
 	}
 
@@ -148,8 +154,6 @@ Object.prototype.calendar = function() {
 							this.classList.add("selected");
 							setDate(this.innerHTML, m+1, y);
 						}
-
-
 
 						if (cur > end) {
 							continue;
